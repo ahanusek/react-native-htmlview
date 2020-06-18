@@ -124,7 +124,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         let listItemPrefix = null;
-        if (node.name === 'li') {
+        if (node.name === 'li' && parent) {
           const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
           const customStyle = inheritedStyle(parent);
 
